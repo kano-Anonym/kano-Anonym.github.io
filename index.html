@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="Kano">
   <meta name="keywords" content="">
@@ -253,7 +255,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2023/07/24/hello-world/" target="_self">
+          <img src="/test/hhhhh.jpg" srcset="/img/loading.gif" lazyload alt="My First Blog">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
         <a href="/2023/07/24/hello-world/" target="_self">
@@ -262,7 +270,7 @@
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/24/hello-world/" target="_self">
+      <a class="index-excerpt " href="/2023/07/24/hello-world/" target="_self">
         <div>
           Welcome to here, I’ll show something not improtant here. First,let’s enjoy this photo Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  Run server1$ hexo server  Generate static files1$
         </div>
