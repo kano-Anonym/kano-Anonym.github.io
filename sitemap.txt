@@ -1,3 +1,4 @@
+http://example.com/2023/07/24/test/
 http://example.com/about/index.html
 http://example.com/2023/07/24/%E5%BC%A0%E9%B9%8F%E6%B6%9B/
 http://example.com/2023/07/24/hello-world/
