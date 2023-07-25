@@ -1,5 +1,4 @@
 http://example.com/2023/07/24/c_point_knowledge/
-http://example.com/2023/07/25/c_char_knowledge/
 http://example.com/about/index.html
 http://example.com/
 http://example.com/tags/C-Language/
