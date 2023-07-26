@@ -1,3 +1,6 @@
+http://example.com/2023/07/26/c_type_knowledge/
+http://example.com/2023/07/26/c_struct_knowledge/
+http://example.com/2023/07/26/c_mem_knowledge/
 http://example.com/2023/07/24/c_point_knowledge/
 http://example.com/about/index.html
 http://example.com/
