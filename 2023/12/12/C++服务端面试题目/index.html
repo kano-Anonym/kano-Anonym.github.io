@@ -1,0 +1,882 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/blog.png">
+  <link rel="icon" href="/img/blog.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Kano">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一定提前准备好个人介绍!一定提前准备好个人介绍!一定提前准备好个人介绍!                          一定不紧张!一定不着急!慢慢思考面试官提出的问题,理一理再作答!             一. 第一次面试的面试题             非常大打击,太紧张了,面试官问题刚出来都没思考就直接做答,前言不搭后语,根本不知道在说什么,很多了解过的问题居">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的C&#x2F;C++面试">
+<meta property="og:url" content="http://example.com/2023/12/12/C++%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/index.html">
+<meta property="og:site_name" content="myBlog">
+<meta property="og:description" content="一定提前准备好个人介绍!一定提前准备好个人介绍!一定提前准备好个人介绍!                          一定不紧张!一定不着急!慢慢思考面试官提出的问题,理一理再作答!             一. 第一次面试的面试题             非常大打击,太紧张了,面试官问题刚出来都没思考就直接做答,前言不搭后语,根本不知道在说什么,很多了解过的问题居">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/Cpp_moon.jpg">
+<meta property="article:published_time" content="2023-12-12T14:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-12T14:29:08.044Z">
+<meta property="article:author" content="Kano">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="C&#x2F;C++">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/Cpp_moon.jpg">
+  
+  
+  
+  <title>我的C/C++面试 - myBlog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1rkKK7TZhdXrxCBDNVVanbRY-gzGzoHsz","app_key":"MoNLTU2ugd7IVKMzO0oFsDla","server_url":"https://1rkkk7tz.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="myBlog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Kano&amp;Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="我的C/C++面试"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-12-12 22:00" pubdate>
+          2023年12月12日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">我的C/C++面试</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年12月12日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <div class="note note-danger">
+            <p>一定提前准备好个人介绍!<br>一定提前准备好个人介绍!<br>一定提前准备好个人介绍!</p>
+          </div>
+
+<div class="note note-primary">
+            <p>一定不紧张!一定不着急!<br>慢慢思考面试官提出的问题,理一理再作答!</p>
+          </div>
+
+<h1 id="一-第一次面试的面试题"><a href="#一-第一次面试的面试题" class="headerlink" title="一. 第一次面试的面试题"></a>一. 第一次面试的面试题</h1><div class="note note-info">
+            <p>非常大打击,太紧张了,面试官问题刚出来都没思考就直接做答,前言不搭后语,根本不知道在说什么,很多了解过的问题居然没有想出来!!!</p>
+          </div>
+<h2 id="1-对数据结构和算法有什么了解"><a href="#1-对数据结构和算法有什么了解" class="headerlink" title="1. 对数据结构和算法有什么了解"></a>1. 对数据结构和算法有什么了解</h2><h3 id="强调基础知识"><a href="#强调基础知识" class="headerlink" title="强调基础知识"></a>强调基础知识</h3><pre><code class="hljs">  a. 指出对常见数据结构(数组,链表,栈,队列,树,图等)和算法(排序,查找,递归,动态规划等)有扎实的理解;
+  b. 提到对这些数据结构和算法的特性,优势和劣势的理解;
+  c. 对于C++,可以补充对于C++的STL中各种容器的底层比较了解并且能够模拟实现出vector,list等.
+</code></pre>
+<h3 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h3><pre><code class="hljs">  强调在实际项目中如何应用数据结构和算法来解决问题,说明在解决某个特定问题时选择了什么样的数据结构
+  和算法,并研究其性能和效率;
+</code></pre>
+<h3 id="学习和实践"><a href="#学习和实践" class="headerlink" title="学习和实践"></a>学习和实践</h3><pre><code class="hljs">  a. 说明自己是否参与过在线课程,刷过算法题,参加过编程竞赛或者某些开源项目;
+  b. 展示自己对该领域的兴趣和投入
+</code></pre>
+<h3 id="解决问题的思考方式"><a href="#解决问题的思考方式" class="headerlink" title="解决问题的思考方式"></a>解决问题的思考方式</h3><pre><code class="hljs">  a. 说明自己在面对复杂问题时如何分析,拆解和设计解决方案的
+  b. 举例说明自己的思考过程
+</code></pre>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h3><p>“我在大学学习期间，通过课程和自学建立了坚实的数据结构和算法基础。我熟悉<br>常见的数据结构，如数组、链表、栈和队列，并了解它们的应用场景和性能特点。<br>在算法方面，我有经验处理排序、查找、递归和动态规划等问题。在实际项目中，<br>我曾使用过数据结构和算法来解决性能瓶颈和优化代码。我也积极参与在线学习，<br>刷题并参加编程竞赛，以不断提升自己。我相信我的数据结构和算法知识可以帮<br>助我更好地解决工程中的复杂问题。”</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><ol>
+<li><p>排序算法：<br>冒泡排序（Bubble Sort）</p>
+<p>选择排序（Selection Sort）</p>
+<p>插入排序（Insertion Sort）</p>
+<p>快速排序（Quick Sort）</p>
+<p>归并排序（Merge Sort）</p>
+<p>堆排序（Heap Sort）</p>
+</li>
+<li><p>搜索算法：</p>
+</li>
+</ol>
+<p>二分搜索（Binary Search）</p>
+<p>深度优先搜索（Depth-First Search，DFS）</p>
+<p>广度优先搜索（Breadth-First Search，BFS）</p>
+<ol start="3">
+<li>图算法：</li>
+</ol>
+<p>最短路径算法（Dijkstra、Bellman-Ford）</p>
+<p>最小生成树算法（Prim、Kruskal）</p>
+<ol start="4">
+<li>动态规划：</li>
+</ol>
+<p>背包问题（0&#x2F;1背包、多重背包）</p>
+<p>最长公共子序列（Longest Common Subsequence）</p>
+<p>最短编辑距离（Edit Distance）</p>
+<ol start="5">
+<li>贪心算法：</li>
+</ol>
+<p>贪心选择性质</p>
+<p>哈夫曼编码（Huffman Coding）</p>
+<ol start="6">
+<li>字符串匹配：</li>
+</ol>
+<p>暴力匹配</p>
+<p>KMP算法（Knuth-Morris-Pratt）</p>
+<p>Boyer-Moore算法</p>
+<ol start="7">
+<li>树和图的遍历：</li>
+</ol>
+<p>二叉树的遍历（前序、中序、后序）</p>
+<p>图的深度优先搜索和广度优先搜索</p>
+<ol start="8">
+<li>分治算法：</li>
+</ol>
+<p>汉诺塔问题</p>
+<p>归并排序</p>
+<ol start="9">
+<li>位运算：</li>
+</ol>
+<p>位与、位或、位异或</p>
+<p>位移操作</p>
+<p>位运算的应用场景</p>
+<ol start="10">
+<li>算法复杂度分析：</li>
+</ol>
+<p>时间复杂度和空间复杂度</p>
+<p>大O符号表示法</p>
+<h2 id="2-编程场景问题的解决"><a href="#2-编程场景问题的解决" class="headerlink" title="2. 编程场景问题的解决"></a>2. 编程场景问题的解决</h2><div class="note note-primary">
+            <p>真的是之前从没有接触过这方面的问题!!!</p>
+          </div>
+<h3 id="常见的编程场景问题"><a href="#常见的编程场景问题" class="headerlink" title="常见的编程场景问题"></a>常见的编程场景问题</h3><ol>
+<li>查找问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 在一个有序数组中查找特定元素。<br>算法： 二分查找。<br>示例： 在有序数组 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>] 中查找元素 <span class="hljs-number">4</span>。<br></code></pre></td></tr></table></figure></li>
+<li>排序问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 对一个数组进行排序。<br>算法： 快速排序、归并排序、冒泡排序等。<br>示例： 使用快速排序对数组 [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>] 进行<br><br>问题： 一亿个数里面找最小的一百个数。<br>算法： 大堆排序<br>示例： 在这个场景中，可以考虑使用最小堆（Min Heap）来解决问题。最小堆是一种数据结构，<br>其中每个节点的值都小于或等于其子节点的值。通过维护一个最小堆，我们可以有效地找到最小的 k 个元素。<br>建立一个大小为k的最小堆,用于存储当前找到的最小的k个数.遍历一亿个数,将每个数与堆顶元素进行比较:<br><span class="hljs-keyword">if</span>(num[i] &gt; _top_max) &#123;<span class="hljs-comment">//当前数大于大堆堆顶元素,则跳过</span><br>   <span class="hljs-keyword">continue</span>;<br>&#125;<span class="hljs-keyword">else</span> &#123;<br>   <span class="hljs-built_in">DownHeap</span>(num[i]);<span class="hljs-comment">//当前数小于大堆堆顶元素,与其比较,向下调整</span><br>&#125;<br><br></code></pre></td></tr></table></figure></li>
+<li>链表问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 反转一个链表。<br>算法： 迭代法、递归法。<br>示例： 将链表 <span class="hljs-number">1</span>-&gt;<span class="hljs-number">2</span>-&gt;<span class="hljs-number">3</span>-&gt;<span class="hljs-number">4</span>-&gt;<span class="hljs-number">5</span> 反转成 <span class="hljs-number">5</span>-&gt;<span class="hljs-number">4</span>-&gt;<span class="hljs-number">3</span>-&gt;<span class="hljs-number">2</span>-&gt;<span class="hljs-number">1</span>。<br></code></pre></td></tr></table></figure></li>
+<li>树的遍历问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 实现二叉树的前序、中序或后序遍历。<br>算法： 深度优先搜索（DFS）。<br>示例： 对二叉树进行中序遍历。<br></code></pre></td></tr></table></figure></li>
+<li>动态规划问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 爬楼梯问题。<br>算法： 动态规划。<br>示例： 有 n 级楼梯，每次可以爬 <span class="hljs-number">1</span> 或 <span class="hljs-number">2</span> 级，有多少种不同的方法可以爬到楼顶<br></code></pre></td></tr></table></figure></li>
+<li>哈希表问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 两数之和。<br>算法： 哈希表。<br>示例： 在数组 [<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">15</span>] 中找到两个数的和等于目标数 <span class="hljs-number">9</span>。<br></code></pre></td></tr></table></figure></li>
+<li>栈和队列问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 有效的括号。<br>算法： 栈。<br>示例： 判断一个字符串中的括号是否匹配。<br></code></pre></td></tr></table></figure></li>
+<li>图问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 课程表（检测有向图中是否有环）。<br>算法： 拓扑排序。<br>示例： 判断是否可以完成一系列课程的学习。<br></code></pre></td></tr></table></figure></li>
+<li>贪心算法问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">题： 分发饼干。<br>算法： 贪心算法。<br>示例： 给定孩子的满足度和饼干的大小，最多能满足多少孩子。<br></code></pre></td></tr></table></figure></li>
+<li>并查集问题   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">问题： 冗余连接（查找图中的环）。<br>算法： 并查集。<br>示例： 从一系列边中找到导致图中环的最后一条边。<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="3-红黑树"><a href="#3-红黑树" class="headerlink" title="3. 红黑树"></a>3. 红黑树</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>红黑树（Red-Black Tree）是一种自平衡的二叉搜索树，它在插入和删除节点时通过一系列的旋转和着色操作来保持树的平衡，以确保其高度始终保持在对数级别。红黑树在算法和数据结构中被广泛应用，例如在关联容器的实现（如C++中的std::map和std::set）以及文件系统的某些实现中。</p>
+<h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><h4 id="自平衡性"><a href="#自平衡性" class="headerlink" title="自平衡性"></a>自平衡性</h4><pre><code class="hljs">  红黑树是一种自平衡的二叉搜索树，通过在插入和删除节点时进行旋转和重新着色等操作，保持了树的平衡。
+  这确保了树的高度保持在对数级别，使得在查找、插入和删除等操作的时间复杂度保持在O(log n)级别。
+</code></pre>
+<h4 id="节点颜色"><a href="#节点颜色" class="headerlink" title="节点颜色"></a>节点颜色</h4><pre><code class="hljs">  每个节点要么是红色，要么是黑色。这种着色规则有助于满足红黑树的平衡性质。
+</code></pre>
+<h4 id="根节点特性"><a href="#根节点特性" class="headerlink" title="根节点特性"></a>根节点特性</h4><pre><code class="hljs">  树的根节点是黑色的。这是为了确保路径规则成立，从而保证树的整体平衡性。
+</code></pre>
+<h4 id="红色节点特性"><a href="#红色节点特性" class="headerlink" title="红色节点特性"></a>红色节点特性</h4><pre><code class="hljs">  如果一个节点是红色的，则它的子节点必须是黑色的。这个规则保证了没有两个相邻的红色节点，从而避免了潜在的
+  不平衡情况。
+</code></pre>
+<h4 id="叶子节点特性"><a href="#叶子节点特性" class="headerlink" title="叶子节点特性"></a>叶子节点特性</h4><pre><code class="hljs">  每个叶子节点（通常是NULL或NIL节点）是黑色的。这使得在计算路径上的黑色节点数量时，将叶子节点也考虑在内。
+</code></pre>
+<h4 id="路径规则"><a href="#路径规则" class="headerlink" title="路径规则"></a>路径规则</h4><pre><code class="hljs">  从任意节点到其每个叶子节点的路径上包含相同数量的黑色节点。这个规则确保了树的整体平衡性，因为在最坏情况
+  下，任何路径的长度最多是其它路径长度的两倍。
+</code></pre>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><h4 id="自平衡性-1"><a href="#自平衡性-1" class="headerlink" title="自平衡性"></a>自平衡性</h4><pre><code class="hljs">  红黑树通过自动的旋转和着色操作保持平衡，确保了树的高度保持在对数级别。这使得在查找、插入和删除等操作的
+  时间复杂度能够保持在O(log n)级别。
+</code></pre>
+<h4 id="高效的插入和删除操作"><a href="#高效的插入和删除操作" class="headerlink" title="高效的插入和删除操作"></a>高效的插入和删除操作</h4><pre><code class="hljs">  由于红黑树的自平衡性，插入和删除节点时的性能表现相对较好。这使得红黑树在需要频繁插入和删除操作的场景
+  中具有优势。
+</code></pre>
+<h4 id="有序性"><a href="#有序性" class="headerlink" title="有序性"></a>有序性</h4><pre><code class="hljs">  红黑树是一种二叉搜索树，保持了节点的有序性。这使得在红黑树上进行范围查询等操作非常高效。
+</code></pre>
+<h4 id="广泛应用"><a href="#广泛应用" class="headerlink" title="广泛应用"></a>广泛应用</h4><pre><code class="hljs">  红黑树的自平衡性使得它在各种领域得到广泛应用，包括实现关联容器（例如C++中的std::map和std::set）和文件系统等。
+</code></pre>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><h4 id="相对复杂"><a href="#相对复杂" class="headerlink" title="相对复杂"></a>相对复杂</h4><pre><code class="hljs">  红黑树的实现相对复杂，因为需要处理旋转和着色等复杂的操作。相比于其他平衡二叉树，例如AVL树，红黑树的实现可能更难理解和调试。
+</code></pre>
+<h4 id="非常数因子"><a href="#非常数因子" class="headerlink" title="非常数因子"></a>非常数因子</h4><pre><code class="hljs">  尽管红黑树在平均情况下具有对数级别的性能，但在最坏情况下，仍然不是常数因子。有些操作可能涉及到多次旋转，导致性能略有下降。
+</code></pre>
+<h4 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h4><pre><code class="hljs">  尽管红黑树在平均情况下具有对数级别的性能，但在最坏情况下，仍然不是常数因子。有些操作可能涉及到多次旋转，导致性能略有下降。
+</code></pre>
+<h2 id="4-进程-线程与协程"><a href="#4-进程-线程与协程" class="headerlink" title="4. 进程, 线程与协程"></a>4. 进程, 线程与协程</h2><h2 id="5-线程同步有哪些"><a href="#5-线程同步有哪些" class="headerlink" title="5. 线程同步有哪些"></a>5. 线程同步有哪些</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C-C/" class="category-chain-item">C/C++</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%9D%A2%E8%AF%95/" class="print-no-link">#面试</a>
+      
+        <a href="/tags/C-C/" class="print-no-link">#C/C++</a>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>我的C/C++面试</div>
+      <div>http://example.com/2023/12/12/C++服务端面试题目/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Kano</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年12月12日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/31/%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F/" title="C++项目&lt;&lt;日志系统&gt;&gt;">
+                        <span class="hidden-mobile">C++项目&lt;&lt;日志系统&gt;&gt;</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"1rkKK7TZhdXrxCBDNVVanbRY-gzGzoHsz","appKey":"MoNLTU2ugd7IVKMzO0oFsDla","path":"window.location.pathname","placeholder":"说点什么","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://1rkkk7tz.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
